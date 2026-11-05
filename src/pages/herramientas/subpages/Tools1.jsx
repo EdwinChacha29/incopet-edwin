@@ -40,7 +40,7 @@ export default function Tools1() {
       <Subpage title="COMPLETACIÓN" image="/img/all.jpg" />
       <Headers
         title="HERRAMIENTAS DE COMPLETACIÓN"
-        paragraph="Proveemos herramientas y equipos de completación de alta calidad, diseñados bajo estrictos estándares industriales para optimizar la eficiencia y seguridad en sus operaciones de campo:"
+        paragraph="Contamos con las siguientes herramientas:"
       />
       <div data-aos="fade-up" className="toolsContainer">
         <div className="toolsBox">

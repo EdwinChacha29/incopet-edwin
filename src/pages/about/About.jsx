@@ -88,7 +88,7 @@ export default function About() {
         </div>
       </div>
       <div data-aos="fade-up" className="aboutCertBox">
-        <Headers title="CERTIFICACIONES" />
+        <h2>CERTIFICACIONES</h2>
         <div className="aboutCert">
           <img className="iso" src="/img/iso/iso9.png" alt="" />
           <img className="iso" src="/img/iso/iso14.png" alt="" />

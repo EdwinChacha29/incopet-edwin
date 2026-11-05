@@ -28,7 +28,7 @@ export default function History() {
       <Subpage title="HISTORIA" image="/img/historyTop.jpg" />
       <Headers
         title="NUESTRA EMPRESA"
-        paragraph="Desde nuestros inicios en 2013, en INCOPET nos hemos transformado de manera constante para responder a los desafíos de la industria. Te invitamos a recorrer los hitos y eventos clave que han marcado nuestra evolución hasta la actualidad:"
+        paragraph="INCOPET fue inicialmente concebido en 2013. Conoce nuestra historia:"
       />
       <div className="historyTimelineWrapper">
         <div data-aos="fade-up" className="centerLine"></div>
@@ -183,61 +183,6 @@ export default function History() {
               Continuamos haciendo historia en la industria ecuatoriana
               alcanzando nuevos hitos empresariales que nos permiten “ir más
               allá de las expectativas de nuestros clientes”…
-            </p>
-          </div>
-        </div>
-        {/* --- 2023 --- */}
-        <div data-aos="fade-up" className="historyTimelineRow row-2">
-          <div className="timelineSection">
-            <i className="timelineIcon fas fa-circle"></i>
-            <div className="historyTimelineDetails">
-              <span className="historyDate">2023</span>
-            </div>
-            <p>
-              Fortaleciendo nuestra cartera de servicios integrales, inauguramos
-              oficialmente nuestra nueva línea de negocio en Cementación de
-              Pozos. Equipamos a la empresa con tecnología de punta y personal
-              especializado de amplia trayectoria, permitiéndonos ejecutar
-              operaciones críticas de aislamiento zonal y aseguramiento de
-              integridad de pozos para los principales operadores del país.
-            </p>
-          </div>
-        </div>
-
-        {/* --- 2025 --- */}
-        <div data-aos="fade-up" className="historyTimelineRow row-1">
-          <div className="timelineSection">
-            <i className="timelineIcon fas fa-circle"></i>
-            <div className="historyTimelineDetails">
-              <span className="historyDate">2025</span>
-            </div>
-            <p>
-              Marcamos un hito de innovación tecnológica en la industria al
-              concretar una alianza estratégica con una reconocida firma
-              multinacional para el desarrollo de fluidos avanzados. Esta
-              colaboración dio paso a la implementación en campo de sistemas de
-              nanofluidos y microemulsiones de última generación, optimizando la
-              recuperación de hidrocarburos, mejorando la estabilidad del pozo y
-              reduciendo el impacto ambiental.
-            </p>
-          </div>
-        </div>
-
-        {/* --- 2026 --- */}
-        <div data-aos="fade-up" className="historyTimelineRow row-2">
-          <div className="timelineSection">
-            <i className="timelineIcon fas fa-circle"></i>
-            <div className="historyTimelineDetails">
-              <span className="historyDate">2026</span>
-            </div>
-            <p>
-              Reafirmando nuestro liderazgo e interacción con los foros más
-              importantes del sector, participamos activamente en el prestigioso
-              congreso SPE GAIA 2026. Durante el evento, INCOPET presentó sus
-              avances en sostenibilidad, soluciones de bajo impacto ambiental y
-              tecnologías de vanguardia aplicadas a la eficiencia operativa,
-              consolidando nuestra visión hacia una industria energética
-              responsable e innovadora.
             </p>
           </div>
         </div>

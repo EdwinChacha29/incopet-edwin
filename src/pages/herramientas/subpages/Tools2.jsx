@@ -33,7 +33,7 @@ export default function Tools2() {
       <Subpage title="PESCA" image="/img/all.jpg" />
       <Headers
         title="HERRAMIENTAS DE PESCA"
-        paragraph="Ofrecemos soluciones avanzadas en herramientas de pesca industrial, garantizando máxima precisión, seguridad y reducción de tiempos no productivos en sus operaciones:"
+        paragraph="Contamos con las siguientes herramientas:"
       />
       <div data-aos="fade-up" className="toolsContainer">
         <div className="toolsBox">

@@ -21,8 +21,6 @@ import Service2 from "./pages/services/subpages/Service2";
 import Service3 from "./pages/services/subpages/Service3";
 import 'aos/dist/aos.css';
 import PageNotFound from "./pages/notFound/PageNotFound";
-// Importación de tu CookieBanner
-import CookieBanner from "./components/cookiebanner/cookieBanner.jsx";
 
 function App() {
   return (
@@ -78,7 +76,6 @@ function App() {
         <Footer></Footer>
       </Router>
 
-      <CookieBanner />
     </>
   );
 }

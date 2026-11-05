@@ -125,7 +125,7 @@ export default function Home() {
           <div className="homeCard">
             <img
               className="homeCardImg"
-              src="./img/BLOG_PICTURE.png"
+              src="/img/team.jpg"
               width="400px"
               alt=""
             />

@@ -12,16 +12,9 @@ const Send = () => {
 
 export default function Contact() {
   const [send, setSend] = useState(false);
-  const [acceptedDataPolicy, setAcceptedDataPolicy] = useState(false);
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
-    if (!acceptedDataPolicy) {
-      alert("Debe aceptar la política de tratamiento de datos personales para continuar.");
-      return;
-    }
-
     emailjs
       .sendForm(
         "service_rschxfj",
@@ -38,50 +31,38 @@ export default function Contact() {
         }
       );
     e.target.reset();
-    setAcceptedDataPolicy(false);
     setSend(true);
   };
-
   setTimeout(() => {
     setSend(false);
   }, 5000);
-
   const [initial, setInitial] = useState(0);
-
   useEffect(() => {
     if (initial === 0) {
       setInitial(1);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [initial]);
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-
   return (
     <div className="contactPage">
       <Helmet>
         <title>INCOPET S.A. | Contacto</title>
         <meta
           name="description"
-          content="Atención personalizada y servicios para la industria hidrocarburífera. Encuéntranos en Quito y El Coca."
+          content="Estamos ubicados en Quito y en el Coca. Encuentrános en todas nuestras redes como Incopet del Ecuador. Facebook, Instagram y Linkedin"
         />
       </Helmet>
-      
-      {/* MEJORA EN EL ENCABEZADO */}
       <Tops
         image="/img/contactTop.jpg"
         title="CONTACTO"
-        paragraph="Cobertura Operativa Nacional | Presencia Estratégica en Quito y El Coca"
+        paragraph="Estamos ubicados en Quito y en el Coca"
       />
-      
       <Headers title="CONTÁCTENOS" />
-
       <section data-aos="zoom-in" className="contactFormWrapper">
         <div className="contactContainer">
-          
-          {/* INFORMACIÓN SEDE PRINCIPAL */}
           <div className="contactInfo">
             <h3>Sede Principal</h3>
             <div className="contactInfoBox">
@@ -91,10 +72,10 @@ export default function Contact() {
               <div className="contactInfoText">
                 <h4>Dirección</h4>
                 <p>
-                  José Vinueza lote 1 y Manuel Aguirre
-                  <br /> Sector La Morita - Tumbaco
-                  <br /> Quito, Pichincha EC170903, Ecuador
-                  <br /> Tumbaco - Ecuador
+                  Av. Interoceánica OE6-73 y González Suárez
+                  <br /> Edificio Picadilly Center, Piso 1, Ofic. 107
+                  <br />
+                  Tumbaco - Ecuador
                 </p>
               </div>
             </div>
@@ -118,13 +99,11 @@ export default function Contact() {
               <div className="contactInfoText">
                 <h4>Correo</h4>
                 <p>
-                  <a href="mailto:asistente@incopet.com">asistente@incopet.com</a>
+                  <a href="mailto:info@incopet.com">info@incopet.com</a>
                 </p>
               </div>
             </div>
           </div>
-
-          {/* INFORMACIÓN BASE COCA */}
           <div className="contactInfo">
             <h3>Base Coca</h3>
             <div className="contactInfoBox">
@@ -134,8 +113,9 @@ export default function Contact() {
               <div className="contactInfoText">
                 <h4>Dirección</h4>
                 <p>
-                  Vía El Coca - Lago Agrio Km. 7 y Vía Empedrada <br />
-                  Barrio San Cristobal del Río Coca <br />
+                  Vía El Coca - Lago Agrio Km. 7 y Vía Empedrada <br /> Barrio
+                  San Cristobal del Río Coca
+                  <br />
                   Orellana-Ecuador
                 </p>
               </div>
@@ -150,33 +130,31 @@ export default function Contact() {
               </div>
             </div>
             <div className="contactInfoBox">
-              <div className="contactIcon">
-                <i className="fa-solid fa-triangle-exclamation"></i>
+                <div className="contactIcon">
+                    <i className="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div className="contactInfoText">
+                  <h4>Correo Denuncias</h4>
+                  <p>
+                    <a href="mailto:info@incopet.com">denuncias@incopet.com</a>
+                  </p>
+                </div>
               </div>
-              <div className="contactInfoText">
-                <h4>Correo Denuncias</h4>
-                <p>
-                  <a href="mailto:denuncias@incopet.com">denuncias@incopet.com</a>
-                </p>
-              </div>
-            </div>
+            
           </div>
-
-          {/* FORMULARIO DE CONTACTO ADAPTADO LOPDP */}
           <div className="contactForm">
             <form ref={form} onSubmit={sendEmail}>
               <h1
                 style={{
-                  fontSize: 28,
+                  fontSize: 30,
                   fontWeight: 600,
                   textAlign: "center",
-                  marginBottom: 10,
+                  marginBottom: 20,
                 }}
               >
                 ¿Te encuentras interesado en nuestros servicios?
               </h1>
-              <h2 style={{ textAlign: "center", marginBottom: 25 }}>Contáctanos Ahora</h2>
-              
+              <h2>Contáctanos Ahora</h2>
               <div className="contactInputBox">
                 <input
                   type="text"
@@ -186,12 +164,10 @@ export default function Contact() {
                 />
                 <span>Nombre Completo</span>
               </div>
-              
               <div className="contactInputBox">
                 <input type="email" required name="user_email" />
                 <span>Email</span>
               </div>
-              
               <div className="contactInputBox">
                 <input
                   type="text"
@@ -201,62 +177,15 @@ export default function Contact() {
                 />
                 <span>Escribe tu mensaje...</span>
               </div>
-
-              {/* CASILLA LOPDP Y CLÁUSULA LEGAL */}
-              <div 
-                style={{ 
-                  display: "flex", 
-                  alignItems: "flex-start", 
-                  gap: "10px", 
-                  marginTop: "15px", 
-                  marginBottom: "20px",
-                  fontSize: "0.82rem",
-                  color: "#555",
-                  textAlign: "left"
-                }}
-              >
-                <input 
-                  type="checkbox" 
-                  id="lopdpCheck" 
-                  required
-                  checked={acceptedDataPolicy}
-                  onChange={(e) => setAcceptedDataPolicy(e.target.checked)}
-                  style={{ width: "18px", height: "18px", marginTop: "2px", cursor: "pointer" }}
-                />
-                <label htmlFor="lopdpCheck" style={{ cursor: "pointer", lineHeight: "1.4" }}>
-                  He leído y acepto el tratamiento de mis datos personales conforme a la Ley Orgánica de Protección de Datos Personales (LOPDP) de Ecuador y la{" "}
-                  <a 
-                    href="/docs/politica_proteccion_datos.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    style={{ color: "#0056b3", textDecoration: "underline", fontWeight: "bold" }}
-                  >
-                    Política de Privacidad de INCOPET S.A.
-                  </a>
-                </label>
-              </div>
-
               <div className="contactInputBox">
-                <input 
-                  type="submit" 
-                  value="Enviar" 
-                  disabled={!acceptedDataPolicy}
-                  style={{
-                    opacity: acceptedDataPolicy ? 1 : 0.6,
-                    cursor: acceptedDataPolicy ? "pointer" : "not-allowed"
-                  }}
-                />
+                <input type="submit" name="" value="Enviar" />
               </div>
-
               <div className="contactInputBox">{send ? <Send /> : null}</div>
             </form>
           </div>
-
         </div>
       </section>
-
-      <Headers title="MÁS INFORMACIÓN" />
-
+      <Headers title="MÁS INFORMACIÓN"></Headers>
       <div data-aos="zoom-in" className="contactExtra">
         <div className="contactExtraBox">
           <div className="contactExtraIcon">
@@ -292,6 +221,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

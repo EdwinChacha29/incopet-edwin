@@ -12,7 +12,7 @@
   color: black;
   margin-bottom: 20px;
   padding: 10px;
-  border-bottom: 3px solid #004b93;
+  border-bottom: 1px solid rgba(197, 197, 197, 0.856);
   text-align: center;
 }
 .headersContent p {

@@ -32,7 +32,7 @@ export default function Values() {
       <Headers
         title="NUESTROS VALORES"
         paragraph="
-          En INCOPET asumimos nuestros valores medulares para orientar el
+          En INCOPET asumimos nuestras valores medulares para orientar el
           cumplimiento del propósito de la institución."
       />
       <div className="valuesFeatures">
